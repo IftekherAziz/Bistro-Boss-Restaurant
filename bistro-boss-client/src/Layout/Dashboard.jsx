@@ -4,6 +4,7 @@ import {
   FaWallet,
   FaCalendarAlt,
   FaHome,
+  // eslint-disable-next-line no-unused-vars
   FaBook,
   FaUsers,
   FaUtensils,
@@ -56,13 +57,17 @@ const Dashboard = () => {
                 <img src={logo} alt="" />
               </li>
               <li>
-                <NavLink to="/dashboard/home">
-                  <FaHome></FaHome> Dashboard
+                <NavLink to="/dashboard/admin-home">
+                  <FaHome></FaHome> Admin Dashboard
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/allusers">
+                  <FaUsers></FaUsers> All Users
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/dashboard/add-item">
-                  {" "}
                   <FaUtensils></FaUtensils> Add Items
                 </NavLink>
               </li>
@@ -71,16 +76,11 @@ const Dashboard = () => {
                   <FaWallet></FaWallet> Manage Items
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/dashboard/history">
                   <FaBook></FaBook> Manage Bookings
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard/allusers">
-                  <FaUsers></FaUsers> All Users
-                </NavLink>
-              </li>
+              </li> */}
             </>
           ) : (
             <>
@@ -89,7 +89,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <NavLink to="/dashboard/user-home">
-                  <FaHome></FaHome> Dashboard
+                  <FaHome></FaHome> User Dashboard
                 </NavLink>
               </li>
               <li>
@@ -111,11 +111,11 @@ const Dashboard = () => {
                 </NavLink>
               </li>
             </>
-          )}      
+          )}
           <div className="divider"></div>
           <li>
             <NavLink to="/">
-              <FaHome></FaHome> Home
+              <FaHome></FaHome> Homepage
             </NavLink>{" "}
           </li>
           <li>
