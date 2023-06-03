@@ -3,6 +3,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const ManageItems = () => {
   const [menu, , refetch] = useMenu();
@@ -31,7 +32,10 @@ const ManageItems = () => {
   };
 
   return (
-    <div className="max-h-screen p-10 w-full">
+    <div className="max-h-screen pt-0 p-10 w-full">
+      <Helmet>
+        <title>Bistro Boss | Manage Items</title>
+      </Helmet>
       <SectionTitle
         heading="Manage All Items"
         subHeading="Hurry up"

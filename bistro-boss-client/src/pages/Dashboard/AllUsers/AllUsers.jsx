@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
@@ -64,10 +65,14 @@ const AllUsers = () => {
   };
 
   return (
-    <div className="max-h-screen p-10 w-full">
+    <div className="max-h-screen pt-0 p-10 w-full">
       <Helmet>
         <title>Bistro Boss | All users</title>
       </Helmet>
+      <SectionTitle
+        heading="Manage Users"
+        subHeading="How Many?"
+      ></SectionTitle>
       <h3 className="border mb-5 text-xl bg-white rounded font-semibold h-[50px] text-center flex items-center justify-center">
         Total Users: {users.length}
       </h3>
@@ -76,7 +81,7 @@ const AllUsers = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>#</th>           
+              <th>#</th>
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
@@ -86,7 +91,7 @@ const AllUsers = () => {
           <tbody>
             {users.map((user, index) => (
               <tr key={user._id}>
-                <th>{index + 1}</th>           
+                <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>

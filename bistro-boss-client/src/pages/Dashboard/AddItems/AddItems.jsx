@@ -2,6 +2,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 // import img api:
 const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
@@ -47,6 +48,9 @@ const AddItems = () => {
 
   return (
     <div className="w-full px-10  ">
+      <Helmet>
+        <title>Bistro Boss | Add Item</title>
+      </Helmet>
       <SectionTitle
         subHeading="What's New ?"
         heading="Add an item"
