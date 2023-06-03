@@ -1,8 +1,10 @@
+import useAuth from "../../../hooks/useAuth";
 
 const AdminHome = () => {
+    const {user} = useAuth();
     return (
-        <div>
-           <h2>This is admin homepage</h2> 
+        <div className="w-full m-4">
+           <h2 className="text-3xl text-center">Welcome back : {user.displayName} </h2> 
         </div>
     );
 };

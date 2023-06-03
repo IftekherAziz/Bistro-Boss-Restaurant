@@ -12,7 +12,6 @@ import {
   FaShoppingBag,
 } from "react-icons/fa";
 import useCart from "../hooks/useCart";
-import { FaGripHorizontal } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import useAdmin from "../hooks/useAdmin";
 
@@ -38,13 +37,15 @@ const Dashboard = () => {
   return (
     <div className="drawer drawer-mobile ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content py-10 bg-slate-50  flex flex-col items-center justify-center border">
-        <label
-          htmlFor="my-drawer-2"
-          className="mt-12 border rounded-full p-4 cursor-pointer  bg-white drawer-button lg:hidden"
-        >
-          <FaGripHorizontal></FaGripHorizontal>
-        </label>
+      <div className="drawer-content py-5 bg-slate-50 ">
+        <div className="text-center">
+          <label
+            htmlFor="my-drawer-2"
+            className="mt-12 border rounded p-4 cursor-pointer bg-zinc-50 text-center  drawer-button lg:hidden"
+          >
+           Open Menu
+          </label>
+        </div>
         <Outlet className="mt-10"></Outlet>
       </div>
       <div className="drawer-side bg-slate-900 text-white">
