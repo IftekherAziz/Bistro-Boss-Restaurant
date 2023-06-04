@@ -28,16 +28,20 @@ const NavBar = () => {
       <li>
         <Link to="/menu">Our Menu</Link>
       </li>
-      {isAdmin ? (
-        <li>
-          {" "}
-          <Link to="/dashboard/admin-home">Dashboard</Link>
-        </li>
-      ) : (
-        <li>
-          {" "}
-          <Link to="/dashboard/user-home">Dashboard</Link>
-        </li>
+      {user && user.email && (
+        <>
+          {isAdmin ? (
+            <li>
+              {" "}
+              <Link to="/dashboard/admin-home">Dashboard</Link>
+            </li>
+          ) : (
+            <li>
+              {" "}
+              <Link to="/dashboard/user-home">Dashboard</Link>
+            </li>
+          )}
+        </>
       )}
       <li>
         <Link to="/order/salad">Order Food</Link>
