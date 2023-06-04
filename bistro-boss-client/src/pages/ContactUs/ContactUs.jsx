@@ -18,7 +18,7 @@ const ContactUs = () => {
     // console.log(name, email, phone, comment);
 
     // post data to mongodb:
-    fetch("http://localhost:5000/contacts", {
+    fetch("https://bistro-boss-restaurant-beta.vercel.app/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

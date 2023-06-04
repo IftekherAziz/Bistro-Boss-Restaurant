@@ -32,7 +32,7 @@ const SignUp = () => {
           const saveUser = { name: data.name, email: data.email };
 
           // Save user data on MongoDB
-          fetch("http://localhost:5000/users", {
+          fetch("https://bistro-boss-restaurant-beta.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
