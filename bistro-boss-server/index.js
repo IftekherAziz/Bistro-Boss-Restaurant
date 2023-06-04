@@ -250,7 +250,7 @@ async function run() {
             */
 
             const payments = await paymentCollection.find().toArray();
-            const revenue = payments.reduce((sum, payment) => sum + payment.price, 0)
+            const revenue = payments.reduce((sum, payment) => sum + payment.price, 0).toFixed(2);
 
             res.send({
                 revenue,
@@ -274,8 +274,8 @@ async function run() {
          **/
 
         // GET order stats from MongoDB:
-        app.get('/order-stats', async (req, res) => {
-           // Agrigate pipeline to fetch menuCollection data
+        app.get('/order-stats', verifyJWT, verifyAdmin, async (req, res) => {
+            // Agrigate pipeline to fetch menuCollection data
             const pipeline = [
                 {
                     $lookup: {
